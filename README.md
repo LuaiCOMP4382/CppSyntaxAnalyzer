@@ -2,6 +2,11 @@
 
 The capstone project for C++ nanodegree program. The program takes source code input from a text file, parses tokens and shows if the syntax of the code is correct. The project uses Recursive Descent Parsing method to analyze syntax, baesd on specific grammar and production rules, provided below.
 
+In general, compilers go through 3 main processes: Lexical, syntax and semantic analysis.
+In the first process, the text is scanned to extract list of tokens and create several data structures to store and prepare them for the next process. Then, to analyze syntax, the tokens' order is checked to ensure it follows the language's grammar correctly, which is defined by a set of production rules. If it succeeds, the last process checks the "semantics" of the text based on several rules enforced by the language, to ensure deterministic and correct behavior.
+
+This project goes only through the first two processes.
+
 Examples of source codes and their syntax analysis results:
 TO BE ADDED
 
