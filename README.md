@@ -1,5 +1,6 @@
 # Custom Syntax Analyzer in C++
 
+## Project description
 The capstone project for C++ nanodegree program. The program takes source code input from a text file, parses tokens and shows if the syntax of the code is correct. The project uses Recursive Descent Parsing method to analyze syntax, baesd on specific grammar and production rules, provided below.
 
 In general, compilers go through 3 main processes: Lexical, syntax and semantic analysis.
@@ -40,6 +41,17 @@ bool-exp            →   name-value      relational-oper               name-val
 relational-oper     →   "="     |       "<>"     |        "<"    |        "<="     |      ">"    |        ">="
 ```
 
+## Classes:
+- **Util**: Contains static method to get ifstream. `util.h` and `util.cpp`.
+- **Token**: Holds string value, line number and word column index. `token.h` and `token.cpp`.
+- **LexicalAnalyzer**: Has static methods to parse from `ifstream` to `deque` of **Token**s, and a set of reserved words. `lexical_analyzer.h` and `lexical_analyzer.cpp`.
+- **SyntaxParser**: An abstract class that holds `deque` of **Token**s, and methods for parsing and handling errors. `syntax_parser.h` and `syntax_parser.cpp`.
+- **RecursiveDescentParser**: Inherits **SyntaxParser**, and contains all methods used in recursion in the parsing method. `syntax_parser.h` and `syntax_parser.cpp`.
+
+## How to execute:
+In `main.cpp`, it gets stream from file `"./source_code.txt"`. Add your file there and modify if necessary. If syntax is correct, it prints `Correct Syntax`, else prints the error details.
+
+## Examples:
 Examples of source codes and their syntax analysis results:
 ```
 module something;
