@@ -35,7 +35,7 @@ deque<Token> LexicalAnalyzer::parseTokens(ifstream& stream) {
             currentLineNumber++;
             continue;
         } else // None matches
-            throw "Unknown character";
+            continue;
 
         Token nextToken(nextTokenValue, currentColumnIndex++, currentLineNumber);
         tokens.push_back(move(nextToken));
