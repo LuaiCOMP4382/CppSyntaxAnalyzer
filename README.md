@@ -121,3 +121,16 @@ if 55>=lookang then while 90 <> hi do fi
 end;begin end.
 ```
 Correct Syntax
+
+## Rubric points criteria addressed:
+- **The project demonstrates an understanding of C++ functions and control structures**: **LexicalAnalyzer** and **RecursiveDescentParser** classes are good examples.
+- **The project reads data from a file and process the data, or the program writes data to a file**: In `main.cpp` with `./source_code.txt`, line 10.
+- **The project uses Object Oriented Programming techniques**: **LexicalAnalyzer**, **RecursiveDescentParster** and **Token** classes.
+- **Classes use appropriate access specifiers for class members**: **RecursiveDescentParster** hides the recursive methods.
+- **Classes abstract implementation details from their interfaces**: **LexicalAnalyzer**'s `parseTokens`, **SyntaxParser**'s `parseSyntax`.
+- **Classes encapsulate behavior**: **LexicalAnalyzer**'s `parseTokens`, `getNextAlpha`, `getNextNumeric`, `getNextSpecial`, `isSpecialCharacter`, and the class is all about extracting tokens. **RecursiveDescentParster**'s `parseSyntax` is the trigger for all recursive methods.
+- **Classes follow an appropriate inheritance hierarchy**: **SyntaxParser** is abstract in nature, and **RecursiveDescentParser** "IS A" **SyntaxParser**.
+- **Derived class functions override virtual base class functions**: `parseSyntax` is the overriden virtual method in **SyntaxParser** by **RecursiveDescentParser**.`
+- **The project makes use of references in function declarations**: `parseTokens` in `lexical_analyzer.h` line 20, and `error` in `syntax_parser.h` line 22, and all recursive methods in **RecursiveDescentParser**.
+- **The project uses scope / Resource Acquisition Is Initialization (RAII) where appropriate**.
+- **The project uses move semantics to move data, instead of copying it, where possible**: `lexical_analyzer.h` line 41.
