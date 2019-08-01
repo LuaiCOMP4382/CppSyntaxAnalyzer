@@ -48,8 +48,13 @@ relational-oper     →   "="     |       "<>"     |        "<"    |        "<="
 - **SyntaxParser**: An abstract class that holds `deque` of **Token**s, and methods for parsing and handling errors. `syntax_parser.h` and `syntax_parser.cpp`.
 - **RecursiveDescentParser**: Inherits **SyntaxParser**, and contains all methods used in recursion in the parsing method. `syntax_parser.h` and `syntax_parser.cpp`.
 
-## How to execute:
-In `main.cpp`, it gets stream from file `"./source_code.txt"`. Add your file there and modify if necessary. If syntax is correct, it prints `Correct Syntax`, else prints the error details.
+## How to build and execute:
+1. Clone this repo.
+2. Make a build directory in the top level directory: `mkdir build && cd build`
+3. Compile: `cmake .. && make`
+4. Run it: `./SyntaxAnalyzer`.
+
+In `main.cpp`, it gets stream from file `"./source_code.txt"`. Add your file in the same directory and modify if necessary. If syntax is correct, it prints `Correct Syntax`, else prints the error details.
 
 ## Examples:
 Examples of source codes and their syntax analysis results:
