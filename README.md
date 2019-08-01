@@ -5,22 +5,22 @@ The capstone project for C++ nanodegree program. The program takes source code i
 Examples of source codes and their syntax analysis results:
 TO BE ADDED
 
-Grammar (in EBNF form):
+Grammar (in EBNF form). Any word between ```"``` is considered to be terminal, and any bold word is a reserved word:
 
 
 ```
 module-declaration → module     "."
 module  →   module- heading        declarations          compound-stmt
-module-heading   → module      "name"       ";"
+module-heading   → **module**      "name"       ";"
 declarations   → const-decl       var-decl       task-decl
-const-decl   → const      ( const-item      ";" )+        |     λ
+const-decl   → **const**      ( const-item      ";" )+        |     λ
 const-item   →  "name"   =   "integer-value"
-var-decl   → var    (var-item     ";" )+         |     λ
-var-item   →  name-list       ":"       integer
+var-decl   → **var**    (var-item     ";" )+         |     λ
+var-item   →  name-list       ":"       **integer**
 name-list  →  "name"    ( ","     "name" )* 
 task-decl → task-heading        declarations        compound-stmt     |     λ
-task-heading  → task      "name"       ";"
-compund-stmt → begin       stmt-list       end
+task-heading  → **task**      "name"       ";"
+compund-stmt → **begin**       stmt-list       **end**
 stmt-list →   ( statement    ";" )* 
 statement → ass-stmt  |  inout-stmt  |  if-stmt  |  while-stmt   |   compound-stmt    |     λ
 ass-stmt → ” name”     ":="      arith-exp
@@ -30,10 +30,10 @@ factor →  "("   arith-exp  ")"   |     name-value
 name-value →  "name"      |        "integer-value"
 add-sign →  "+"    |     "-"
 mul-sign → "*"    |      "/"
-inout-stmt → input    "("    "name"     ")"    |    out   "("   name-value   ")"
-if-stmt → if     bool-exp     then     statement     else-part       fi
-else-part →  else     statement   |   λ
-while-stmt → while      bool-exp     do      statement
+inout-stmt → **input**    "("    "name"     ")"    |    **out**   "("   name-value   ")"
+if-stmt → **if**     bool-exp     **then**     statement     else-part       **fi**
+else-part →  **else**     statement   |   λ
+while-stmt → **while**      bool-exp     **do**      statement
 bool-exp → name-value       relational-oper        name-value 
 relational-oper →  |     "="     |     "<>"     |     "<"    |     "<="     |     ">"    |     ">="
 ```
