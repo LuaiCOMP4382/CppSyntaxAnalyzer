@@ -5,7 +5,7 @@ The capstone project for C++ nanodegree program. The program takes source code i
 Examples of source codes and their syntax analysis results:
 TO BE ADDED
 
-Grammar (in EBNF form). Any word between ```"``` is considered to be terminal, and any bold word is a reserved word:
+Grammar (in EBNF form). Any word between ```"``` is terminal, and any reserved word is between ```**```:
 
 
 ```
