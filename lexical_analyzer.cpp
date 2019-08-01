@@ -31,7 +31,7 @@ deque<Token> LexicalAnalyzer::parseTokens(ifstream& stream) {
         else if (isSpecialCharacter(nextCharacter))
             nextTokenValue = getNextSpecial(stream, nextCharacter);
         else if (nextCharacter == '\n') {
-            currentColumnIndex = 0;
+            currentColumnIndex = 1;
             currentLineNumber++;
             continue;
         } else // None matches

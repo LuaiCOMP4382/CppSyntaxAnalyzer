@@ -7,10 +7,16 @@
 using namespace std;
 
 void SyntaxParser::error(Token &token, const string expectedValues) {
-    string errorMessage = 
-    "Error at line " + to_string(token.getLineNumber()) + ", word index " + to_string(token.getColumnIndex()) +
-    "\nToken found: " + token.value + 
-    "\nExpected: " + expectedValues + "\n";
+    string errorMessage = "";
+
+    if (token.getColumnIndex() == 0 && token.getLineNumber() == 0)
+        errorMessage = 
+        "Error at end\nExpected: " + expectedValues + "\n";
+    else
+        errorMessage = 
+        "Error at line " + to_string(token.getLineNumber()) + ", word index " + to_string(token.getColumnIndex()) +
+        "\nToken found: " + token.value + 
+        "\nExpected: " + expectedValues + "\n";
 
     throw errorMessage;
 }
