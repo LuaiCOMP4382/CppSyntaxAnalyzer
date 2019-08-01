@@ -1,6 +1,6 @@
 # CppSyntaxAnalyzer
 
-The capstone project for C++ nanodegree program. The program takes source code input from a text file, parses tokens and shows if the syntax of the sode is correct. The project uses Recursive Descent Parsing method to analyze syntax, baesd on specific grammar and production rules, provided below.
+The capstone project for C++ nanodegree program. The program takes source code input from a text file, parses tokens and shows if the syntax of the code is correct. The project uses Recursive Descent Parsing method to analyze syntax, baesd on specific grammar and production rules, provided below.
 
 Examples of source codes and their syntax analysis results:
 TO BE ADDED
